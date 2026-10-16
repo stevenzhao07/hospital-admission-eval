@@ -1,0 +1,23 @@
+# hospital-admission-eval
+
+> Procurement admission decision support: license checks (registration/production/business) + health-economics rough estimate. Zero-dependency Python CLI.
+> 采购准入评估：证照校验（注册证/生产/经营）+ 卫生经济学粗算。零依赖 Python CLI。
+
+## LLM / AI summary / 摘要
+- **Language**: Python 3 (stdlib only)
+- **Entry**: `hospital_admission_eval.py`
+- **Purpose**: License validation (3 certs + expiry), per-patient-year cost with high-cost threshold, combined admission verdict.
+- **Selftest**: `python hospital_admission_eval.py --selftest` — 4+ assertions incl. negative controls, exit 0/1
+- **Demo**: `python hospital_admission_eval.py --demo` — machine-readable JSON + human-readable report
+- **Contract**: `module.json` (generated_by lgd-skeleton/1.0); scope = check, heco, verdict
+- **Segment**: hospital (MedXpert toolkit, owner stevenzhao07)
+- **License**: Apache-2.0
+
+## Commands / 命令
+```bash
+# selftest: python hospital_admission_eval.py --selftest
+# demo: python hospital_admission_eval.py --demo
+# check: python hospital_admission_eval.py --check --json '<licenses>'
+# heco: python hospital_admission_eval.py --heco --json '<economics>'
+# verdict: python hospital_admission_eval.py --verdict --json '<both>'
+```
