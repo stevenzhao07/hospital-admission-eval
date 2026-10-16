@@ -16,6 +16,18 @@
 
 ---
 
+## Positioning · 定位
+
+**Hospital-side full-lifecycle · zero-dependency · AI-readable contract**
+
+Part of the **33-module MedXpert medical-device value-chain toolkit** — the only
+hospital-side suite combining full-lifecycle coverage, zero runtime dependencies,
+and an AI-readable layer (`module.json` / `AGENTS.md` / `llms.txt`).
+
+医院端全生命周期 × 零依赖 × AI 可读层：33 模块 MedXpert 医械全产业链工具链的医院端模块，
+唯一同时具备全生命周期覆盖、零运行时依赖与 AI 可读契约（module.json / AGENTS.md / llms.txt）的套件。
+
+
 ## Overview · 总览
 
 License validation (3 certs + expiry), per-patient-year cost with high-cost threshold, combined admission verdict.
