@@ -1,0 +1,51 @@
+{
+  "module": "hospital-admission-eval",
+  "version": "0.1.0",
+  "generated_by": "lgd-skeleton/1.0",
+  "name": "hospital-admission-eval",
+  "description": "Procurement admission decision support: license checks (registration/production/business) + health-economics rough estimate. Zero-dependency Python CLI.",
+  "description_zh": "采购准入评估：证照校验（注册证/生产/经营）+ 卫生经济学粗算。零依赖 Python CLI。",
+  "license": "Apache-2.0",
+  "language": "python",
+  "dependencies": [],
+  "entry": "hospital_admission_eval.py",
+  "commands": {
+    "selftest": "python hospital_admission_eval.py --selftest",
+    "demo": "python hospital_admission_eval.py --demo",
+    "check": "python hospital_admission_eval.py --check --json '<licenses>'",
+    "heco": "python hospital_admission_eval.py --heco --json '<economics>'",
+    "verdict": "python hospital_admission_eval.py --verdict --json '<both>'"
+  },
+  "contract": {
+    "scope": [
+      "check",
+      "heco",
+      "verdict"
+    ],
+    "a1_authority_scope": true,
+    "a2_human_oversight": true,
+    "a3_accountability": true,
+    "exit_codes": {
+      "ok": 0,
+      "blocked": 1,
+      "usage": 2
+    },
+    "negative_controls": [
+      "invalid input rejected with exit 1"
+    ]
+  },
+  "ai_readable": [
+    "AGENTS.md",
+    "llms.txt"
+  ],
+  "docs": [
+    "README.md",
+    "LICENSE"
+  ],
+  "segment": "hospital",
+  "derives_from": "device-regulatory-map",
+  "badges": {
+    "scorecard": "https://api.scorecard.dev/projects/github.com/stevenzhao07/hospital-admission-eval/badge",
+    "license": "Apache-2.0"
+  }
+}
