@@ -1,0 +1,19 @@
+name: smoke
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  selftest:
+    name: Selftest + demo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run selftest
+        run: python hospital_admission_eval.py --selftest
+      - name: Run demo
+        run: python hospital_admission_eval.py --demo
